@@ -1,6 +1,7 @@
 var express = require('express'),
 	app = express.createServer(express.logger()),
-	fs = require('fs');
+	fs = require('fs'),
+	http = require('http');
 
 app.get('/', function(request, response) {
 	response.write(fs.readFileSync("./index.html", "utf8").toString());
